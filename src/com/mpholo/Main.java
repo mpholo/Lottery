@@ -21,6 +21,7 @@ public class Main {
         printLotto(numberSet1);
 
         //power ball
+        upperBound=57;
         System.out.println("\n************PowerBall Numbers***************");
         Map<Integer, TreeSet<Integer>> numberSet2=powerBall(generate,upperBound,5);
         printPowerBall(numberSet2);
@@ -51,7 +52,7 @@ public class Main {
 
     private static void printPowerBall(Map<Integer, TreeSet<Integer>> numberSet) {
         numberSet.forEach((k, v)->{
-            int powerBall = 1+new Random().nextInt(50);
+            int powerBall = 1+new Random().nextInt(20);
             System.out.println(k+" "+v+" "+powerBall);
         });
     }
